@@ -8,7 +8,7 @@ class Blog(models.Model):
     description = models.TextField()
     date = models.DateField(default=timezone.now)
     url = models.URLField(blank=True)
-    image = models.ImageField(upload_to='blog/images/')
+    image = models.ImageField(upload_to='blog/images/', null=True)
 
     def __str__(self):
         return self.title
