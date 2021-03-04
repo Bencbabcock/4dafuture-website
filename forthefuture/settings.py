@@ -25,7 +25,7 @@ SECRET_KEY = 'f1^qn+f5quv=%ylimqy0bu*aza#5-=m=0)y=2g6_n+9s+dw=9!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bencbabcock01.pythonanywhere.com']
+ALLOWED_HOSTS = ['www.4dafuture.com']
 
 
 # Application definition
