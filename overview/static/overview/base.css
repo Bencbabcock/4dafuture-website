@@ -1,0 +1,27 @@
+body{
+  background-color: #F6E8E0;
+  font-family: 'Walter Turncoat';
+}
+
+nav{
+  background-color: #E3B9A0;
+}
+
+h1{
+  font-size: 7em;
+  margin-top: 2%;
+}
+
+.hand-font{
+  font-family: 'Walter Turncoat';
+}
+
+.blog-card{
+  background-color: #F1DCD0
+}
+
+#thesis{
+  margin-top: 30%;
+  margin-bottom: 30%;
+  font-size: 2em;
+}

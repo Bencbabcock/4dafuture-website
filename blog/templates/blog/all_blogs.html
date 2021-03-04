@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Blogs</title>
+    {% extends 'overview/base.html'%}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/all_blogs.css' %}">
+  </head>
+  <body>
+
+
+    {% block content %}
+
+    <div class="container text-center" style="margin-top:2%; margin-bottom:2%">
+      <h3>{{ blogs.count }} blog{{ blogs.count|pluralize }} written</h3>
+    </div>
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        {% for blog in blogs %}
+        <div class="col">
+          <div class="card">
+            <img src="{{ blog.image.url }}" class="card-img-top" alt="NOT FOUND">
+            <div class="card-body blog-card">
+              <a href="{% url 'blog:detail' blog.id %}" style="color: black; text-decoration: none;"><h5 class="card-title">{{ blog.title }}</h5></a>
+              <p class="card-text text-muted">{{ blog.description|striptags|truncatechars:100 }}</p>
+              <p class="card-text"><small class="text-muted">{{ blog.date|date:'M d Y'|upper }}</small></p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+
+
+    {% endblock %}
+  </body>
+</html>

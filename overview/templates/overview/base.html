@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Font for brand name -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- favicon -->
+    <link rel="icon" href="{% static 'overview/4tf_logo.png' %}" type="image/png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'overview/base.css' %}">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand hand-font" href="{% url 'home' %}">
+          <!-- <img src="{% static 'overview/4tf_logo.png' %}" alt="Not Found" width="40" height="60"> -->
+          4 Da Future
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link hand-font" href="{% url 'blog:all_blogs' %}">Blog</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link hand-font" href="#">Podcast</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link disabled hand-font" href="#" tabindex="-1" aria-disabled="true">Store <sup>(coming soon)</sup></a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8zNDM0NDgucnNz?sa=X&ved=0CAIQ9sEGahcKEwjovsf3vZLvAhUAAAAAHQAAAAAQBA"><img src="{% static 'overview/googlepodcasts_logo.png' %}" alt="gp logo not found" height="20" width="20"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://podcasts.apple.com/us/podcast/4-da-future/id1465417262"><img src="{% static 'overview/applepodcasts_logo.png' %}" alt="AP Logo not found" height="20" width="20"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://open.spotify.com/show/2444FZzXMAqR1Nu1cNrllu?si=3RTMI2DOQvqfOreWuBQT8Q"><img src="{% static 'overview/spotify_logo.png' %}" alt="Spotify Logo not found" height="20" width="20"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/4dafutureofficial/"><img src="{% static 'overview/ig_logo.png' %}" alt="IG Logo not found" height="20" width="20"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+{% block content %}{% endblock %}
+
+  </body>
+</html>

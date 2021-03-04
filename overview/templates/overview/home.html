@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>4 Da Future</title>
+    {% extends 'overview/base.html' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'overview/home.css' %}">
+  </head>
+  <body>
+
+    {% block content %}
+
+    <div class="container text-center">
+      <h1 class="hand-font">4 Da Future</h1>
+      <img src="{% static 'overview/4tf_logo.png' %}" alt="">
+    </div>
+
+
+    <div class="container text-center">
+      <h2 class="hand-font" id="thesis">Something that makes 4 Da Future sound cool</h2>
+    </div>
+
+
+
+    {% endblock %}
+  </body>
+</html>
